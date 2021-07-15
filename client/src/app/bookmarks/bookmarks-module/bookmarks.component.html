@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="col-50">
+    <app-bookmarks-list
+      [bookmarks]="bookmarks$ | async"
+      (selected)="selectBookmark($event)"
+      (deleted)="deleteBookmark($event)"
+      (addNew)="resetCurrentBookmark()">
+    </app-bookmarks-list>
+  </div>
+
+  <div class="col-50">
+    <app-bookmark-details
+      [bookmark]="currentBookmark$ | async"
+      [groupBookmarks]="groupBookmarks$ | async"
+      (saved)="saveBookmark($event)"
+      (cancelled)="resetCurrentBookmark()">
+    </app-bookmark-details>
+  </div>
+</div>

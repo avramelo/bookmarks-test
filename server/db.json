@@ -1,0 +1,40 @@
+{
+  "groupBookmarks": [
+    {
+      "id": "1",
+      "title": "Work"
+    },
+    {
+      "id": "2",
+      "title": "Pleasure"
+    },
+    {
+      "id": "3",
+      "title": "Leisure"
+    },
+    {
+      "id": "4",
+      "title": "Music"
+    }
+  ],
+  "bookmarks": [
+    {
+      "id": "3",
+      "name": "Guardian",
+      "URL": "https://www.theguardian.com/international",
+      "groupBookmarkId": "1"
+    },
+    {
+      "id": "5",
+      "name": "Youtube",
+      "URL": "https://www.youtube.com/",
+      "groupBookmarkId": "4"
+    },
+    {
+      "id": "y4IVybJ",
+      "name": "Avaloq home page",
+      "URL": "https://www.avaloq.com/en/home",
+      "groupBookmarkId": "1"
+    }
+  ]
+}

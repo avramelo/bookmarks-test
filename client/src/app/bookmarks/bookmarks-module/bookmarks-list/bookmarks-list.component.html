@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h1>Bookmarks</h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list *ngIf="prepareListState(bookmarks)">
+      <mat-list-item *ngFor="let bookmark of bookmarks; trackBy: trackItem" (click)="selected.emit(bookmark)"
+        class="record">
+        <h3 mat-line>{{bookmark.name}}</h3>
+        <p mat-line>
+          {{bookmark.URL}}
+        </p>
+        <button *ngIf="!readonly" mat-icon-button (click)="deleted.emit(bookmark);$event.stopImmediatePropagation();">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <button type="submit" mat-button color="primary" (click)="addNew.emit()">
+    Add new bookmark
+  </button>
+</mat-card>

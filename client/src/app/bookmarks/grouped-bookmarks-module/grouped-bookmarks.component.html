@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="col-100">
+    <app-grouped-bookmarks-list
+      [groupedBookmarks]="groupedBookmarks$ | async"
+      [bookmarks]="bookmarks$ | async"
+      (addNewGroup)="addNewGroupBookmark()">
+    </app-grouped-bookmarks-list>
+  </div>
+</div>

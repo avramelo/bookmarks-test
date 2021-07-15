@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h1>Bookmarks Groups</h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content *ngIf="prepareListState(groupedBookmarks)">
+    <mat-expansion-panel hideToggle *ngFor="let group of groupedBookmarks; trackBy: trackItem"
+      (click)="selected.emit()" class="record">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{group.title}}
+        </mat-panel-title>
+        <mat-panel-description>
+          Bookmark Group
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div></div>
+      <h3 mat-line *ngFor="let bookmark of getGroupBookmarks(group); trackBy: trackItem">{{bookmark.name}}</h3>
+    </mat-expansion-panel>
+  </mat-card-content>
+</mat-card>

@@ -36,3 +36,23 @@
 
     Run  `npm run server` from root folder of application or access server folder and run `npm start` to run the server.
     
+# Screenshots
+
+   ## Bookmarks Group
+
+   ![BookmarksGroup](https://user-images.githubusercontent.com/13451402/125769709-38b2b5c6-38eb-43e3-b7e4-b9056398d93b.PNG)
+
+   ## Bookmarks Page
+
+
+   ![BookmarksPage](https://user-images.githubusercontent.com/13451402/125769722-73908235-587c-4fc3-bb2a-e9b66f04b825.PNG)
+
+   ## Editing Bookmark
+
+   ![EditingBookmark](https://user-images.githubusercontent.com/13451402/125769734-cfd8a7a5-b4a9-4000-8bac-a29fab517b67.PNG)
+
+   ## Expanded Bookmarks Group
+
+   ![ExpandedBookmarksGroup](https://user-images.githubusercontent.com/13451402/125769748-ba5f38ff-96b9-410f-b764-32e7fa5a083b.PNG)
+
+    

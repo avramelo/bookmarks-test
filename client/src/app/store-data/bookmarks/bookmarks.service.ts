@@ -7,14 +7,12 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BookmarksService {
-  model = 'bookmarks'
+  model = 'bookmarks';
 
-  constructor(
-    private http: HttpClient
-  ) { }
+  constructor(private http: HttpClient) {}
 
   getUrl() {
     return `${environment.apiEndpoint}${this.model}`;
@@ -33,19 +31,22 @@ export class BookmarksService {
   }
 
   loadByGroupBookmark(groupBookmarkId: string) {
-    return this.http.get<Bookmark[]>(this.getUrl(), {params: {groupBookmarkId}})
+    return this.http
+      .get<Bookmark[]>(this.getUrl(), { params: { groupBookmarkId } })
       .pipe(
-        switchMap(bookmarks => {
+        switchMap((bookmarks) => {
           if (bookmarks.length) {
             return of(bookmarks);
           } else {
-            return throwError(`No bookmarks exist for groupBookmark with ID ${groupBookmarkId}`);
+            return throwError(
+              `No bookmarks exist for groupBookmark with ID ${groupBookmarkId}`
+            );
           }
         }),
-        catchError(error => {
+        catchError((error) => {
           return throwError(error);
         })
-      )
+      );
   }
 
   create(bookmark: Bookmark) {

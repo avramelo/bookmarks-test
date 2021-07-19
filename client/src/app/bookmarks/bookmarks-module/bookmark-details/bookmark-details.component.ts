@@ -19,6 +19,14 @@ export class BookmarkDetailsComponent {
     if (value) {
       this.originalName = value.name;
     }
-    this.selectedBookmark = Object.assign({}, value);
+    this.selectedBookmark = Object.assign(
+      {
+        id: null,
+        name: null,
+        groupBookmarkId: null,
+        URL: null,
+      },
+      value
+    );
   }
 }

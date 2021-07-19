@@ -2,13 +2,13 @@
   <mat-card-header>
     <mat-card-title>
       <h1>
-        <span *ngIf="selectedBookmark.id; else prompt">Editing {{originalName}}</span>
+        <span *ngIf="selectedBookmark?.id; else prompt" id="original-name">Editing {{originalName}}</span>
         <ng-template #prompt>Create Bookmark</ng-template>
       </h1>
     </mat-card-title>
   </mat-card-header>
-  <form (submit)="saved.emit(selectedBookmark)">
-    <mat-card-content>
+  <form (submit)="saved.emit(selectedBookmark)" *ngIf="selectedBookmark">
+    <mat-card-content id="selected-bookmark">
       <mat-form-field class="full-width">
         <input matInput placeholder="Name" [(ngModel)]="selectedBookmark.name" type="text" name="name">
       </mat-form-field>

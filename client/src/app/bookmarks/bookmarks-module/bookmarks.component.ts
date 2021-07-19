@@ -9,22 +9,26 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-bookmarks',
   templateUrl: './bookmarks.component.html',
-  styleUrls: ['./bookmarks.component.scss']
+  styleUrls: ['./bookmarks.component.scss'],
 })
 export class BookmarksComponent implements OnInit {
-  groupBookmarks$: Observable<GroupBookmark[]> = this.groupBookmarksFacade.allGroupBookmarks$;
+  groupBookmarks$: Observable<GroupBookmark[]> =
+    this.groupBookmarksFacade.allGroupBookmarks$;
   bookmarks$: Observable<Bookmark[]> = this.bookmarksFacade.allBookmarks$;
-  currentBookmark$: Observable<Bookmark | undefined> = this.bookmarksFacade.currentBookmark$;
+  currentBookmark$: Observable<Bookmark | undefined> =
+    this.bookmarksFacade.currentBookmark$;
 
   constructor(
     private bookmarksFacade: BookmarksFacade,
     private groupBookmarksFacade: GroupBookmarksFacade
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.groupBookmarksFacade.loadGroupBookmarks();
     this.bookmarksFacade.loadBookmarks();
-    this.bookmarksFacade.mutations$.subscribe(_ => this.resetCurrentBookmark());
+    this.bookmarksFacade.mutations$.subscribe((_) =>
+      this.resetCurrentBookmark()
+    );
     this.resetCurrentBookmark();
   }
 
@@ -33,7 +37,7 @@ export class BookmarksComponent implements OnInit {
       id: null,
       name: null,
       groupBookmarkId: null,
-      URL: null
+      URL: null,
     });
   }
 
@@ -52,5 +56,4 @@ export class BookmarksComponent implements OnInit {
   deleteBookmark(bookmark: Bookmark) {
     this.bookmarksFacade.deleteBookmark(bookmark);
   }
-
 }

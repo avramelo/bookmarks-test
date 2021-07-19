@@ -16,4 +16,4 @@ import { StateModule } from './state/state.module';
     StateModule
   ],
 })
-export class CoreDataModule {}
+export class StoreDataModule {}

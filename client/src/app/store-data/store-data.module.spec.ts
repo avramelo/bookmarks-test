@@ -1,15 +1,15 @@
 import { TestBed, async } from '@angular/core/testing';
 
-import { CoreDataModule } from './store-data.module';
+import { StoreDataModule } from './store-data.module';
 
 describe('CoreDataModule', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [CoreDataModule]
+      imports: [StoreDataModule]
     }).compileComponents();
   }));
 
   it('should create', () => {
-    expect(CoreDataModule).toBeDefined();
+    expect(StoreDataModule).toBeDefined();
   });
 });

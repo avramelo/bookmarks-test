@@ -8,9 +8,8 @@ describe('BookmarksListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GroupedBookmarksListComponent ]
-    })
-    .compileComponents();
+      declarations: [GroupedBookmarksListComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

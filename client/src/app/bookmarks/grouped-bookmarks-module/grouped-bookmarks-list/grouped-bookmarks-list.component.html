@@ -5,8 +5,8 @@
     </mat-card-title>
   </mat-card-header>
   <mat-card-content *ngIf="prepareListState(groupedBookmarks)">
-    <mat-expansion-panel hideToggle *ngFor="let group of groupedBookmarks; trackBy: trackItem"
-      (click)="selected.emit()" class="record">
+    <mat-expansion-panel hideToggle *ngFor="let group of groupedBookmarks; trackBy: trackItem" (click)="selected.emit()"
+      class="record">
       <mat-expansion-panel-header>
         <mat-panel-title>
           {{group.title}}

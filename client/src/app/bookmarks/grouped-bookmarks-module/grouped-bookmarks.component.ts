@@ -12,7 +12,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./grouped-bookmarks.component.scss'],
 })
 export class GroupedBookmarksComponent implements OnInit {
-  groupedBookmarks$: Observable<GroupBookmark[]> = this.groupBookmarksFacade.allGroupBookmarks$;
+  groupedBookmarks$: Observable<GroupBookmark[]> =
+    this.groupBookmarksFacade.allGroupBookmarks$;
   bookmarks$: Observable<Bookmark[]> = this.bookmarksFacade.allBookmarks$;
 
   constructor(
